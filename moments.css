@@ -1,0 +1,114 @@
+/* Waxyz Moments 2.2.4 - inherits the theme's Bootstrap grid and typography */
+.moments-page .moments-heading{margin:0 0 18px;padding:0 0 12px;border-bottom:1px solid #eee}
+.moments-heading h2{font-size:22px;margin:0 0 6px;font-weight:600}
+.moments-heading p{color:#999;margin:0;font-size:13px}
+.moment-composer,.moment-card,.moment-login-tip,.moment-empty{background:#fff;border:1px solid #eee;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.035);margin-bottom:18px}
+.moment-composer{padding:16px}
+.moment-composer textarea{width:100%;resize:vertical;min-height:92px;border:0;outline:0;box-shadow:none;padding:4px 2px;font-size:14px;line-height:1.8}
+.moment-composer-tools{display:flex;align-items:center;gap:12px;border-top:1px solid #f2f2f2;padding:11px 0 5px}
+.moment-tool{position:relative;color:#666;cursor:pointer;font-size:13px;margin:0}
+.moment-tool span{font-size:18px;color:#f4645f;vertical-align:-1px}
+.moment-tool input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer}
+.moment-hint{color:#aaa;font-size:12px}
+.moment-extra-fields{display:flex;gap:10px;flex-wrap:wrap;padding-top:7px}
+.moment-extra-fields details{flex:1 1 180px;border:1px solid #eee;border-radius:5px;padding:8px 10px;font-size:13px;color:#777}
+.moment-extra-fields summary{cursor:pointer;outline:0}
+.moment-extra-fields input{display:block;width:100%;margin-top:8px;padding:7px 9px;border:1px solid #eee;border-radius:4px;font-size:12px}
+.moment-composer-bottom{display:flex;align-items:center;justify-content:space-between;margin-top:12px}
+.moment-composer-bottom .btn{border-radius:4px;padding:7px 18px}
+.moment-form-message{font-size:12px;color:#e66}
+.moment-login-tip{padding:18px;color:#888;font-size:13px}
+.moment-card{padding:16px 17px 14px}
+.moment-card-header{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.moment-avatar{width:42px;height:42px;border-radius:50%;object-fit:cover;background:#f5f5f5}
+.moment-author{display:flex;flex-direction:column;gap:3px}
+.moment-author strong{font-size:14px;color:#444}
+.moment-text{font-size:14px;line-height:1.85;color:#444;white-space:normal;overflow-wrap:anywhere;margin:3px 0 12px}
+.moment-images{display:grid;gap:5px;margin:10px 0 12px;max-width:540px}
+.moment-images.grid-1{grid-template-columns:minmax(0, min(72%, 360px))}
+.moment-images.grid-2{grid-template-columns:repeat(2,minmax(0,1fr));max-width:420px}
+.moment-images.grid-3{grid-template-columns:repeat(3,minmax(0,1fr));max-width:420px}
+.moment-images a{display:block;overflow:hidden;border-radius:4px;background:#f5f5f5;aspect-ratio:1/1;cursor:zoom-in}
+.moment-images.grid-1 a{aspect-ratio:auto;max-height:460px}
+.moment-images img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .25s}
+.moment-images a:hover img{transform:scale(1.025)}
+.moment-music{display:flex;align-items:center;gap:12px;background:#f8f8f8;border-radius:6px;padding:10px;margin:12px 0}
+.moment-music>img{width:68px;height:68px;border-radius:5px;object-fit:cover}
+.moment-music-info{display:flex;flex:1;min-width:0;flex-direction:column;gap:4px}
+.moment-music-info strong{font-size:13px;color:#444}
+.moment-music-info small{font-size:11px;color:#999}
+.moment-music audio{width:100%;height:30px;margin-top:3px}
+.moment-video{margin:12px 0}
+.moment-video video{display:block;width:100%;max-height:480px;background:#111;border-radius:6px}
+.moment-video-card{width:min(100%,360px);margin:12px 0;cursor:pointer}
+.moment-video-thumb{height:202px;background:#171717 center/cover no-repeat;border-radius:7px;display:flex;align-items:center;justify-content:center;position:relative}
+.moment-video-thumb:before{content:"";position:absolute;inset:0;background:rgba(0,0,0,.16);border-radius:7px}
+.moment-video-thumb span{position:relative;width:52px;height:52px;border-radius:50%;background:rgba(0,0,0,.62);color:#fff;display:flex;align-items:center;justify-content:center;font-size:22px;padding-left:4px}
+.moment-video-card small{display:block;color:#aaa;margin-top:5px;font-size:11px}
+
+/* ---- 2.1.0：时间行 + 右下角 ··· ---- */
+.moment-meta{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:2px}
+.moment-meta time{font-size:12px;color:#aaa;font-variant-numeric:tabular-nums}
+.moment-more{position:relative;flex:none}
+.moment-more-btn{border:0;background:#f2f2f2;border-radius:4px;width:34px;height:22px;line-height:1;color:#576b95;font-size:16px;letter-spacing:2px;text-indent:2px;padding:0 0 5px;cursor:pointer}
+.moment-more-btn:hover{background:#e9e9e9}
+.moment-more-btn:focus-visible{outline:2px solid #576b95;outline-offset:2px}
+.moment-more-menu{position:absolute;right:42px;top:50%;transform:translateY(-50%);display:flex;align-items:center;background:#4c4c4c;border-radius:5px;box-shadow:0 4px 16px rgba(0,0,0,.25);z-index:20;white-space:nowrap}
+.moment-more-menu[hidden]{display:none}
+.moment-more-menu button{border:0;background:none;color:#fff;font-size:13px;line-height:1;padding:10px 16px;cursor:pointer}
+.moment-more-menu button:hover{opacity:.85}
+.moment-more-menu .moment-like{color:#fff}
+.moment-more-menu .moment-like.is-liked{color:#ff9a9a;font-weight:600}
+.moment-more-divider{width:1px;height:18px;background:rgba(255,255,255,.28);flex:none}
+
+/* ---- 2.1.0：点赞 + 评论灰底区（参考图样式） ---- */
+.moment-interact{background:#f7f7f7;border-radius:4px;margin-top:10px;padding:10px 12px}
+.moment-interact[hidden]{display:none}
+.moment-likes{display:flex;align-items:center;gap:6px;padding:2px 0 6px;font-size:13px;color:#576b95}
+.moment-likes[hidden]{display:none}
+.moment-likes-heart{font-size:13px;color:#576b95}
+.moment-likes-text{color:#576b95}
+.moment-like-count{font-variant-numeric:tabular-nums}
+/* 有点赞行时，评论列表上方加一条分隔线；无点赞时不加 */
+.moment-likes:not([hidden]) + .moment-comments-list{border-top:1px solid #ececec;padding-top:7px;margin-top:2px}
+/* 评论列表始终全部展开：不设 max-height、不折叠、无“查看更多” */
+.moment-comments-list{display:block}
+.moment-comment{display:flex;align-items:baseline;gap:0;padding:3px 0;font-size:13px;line-height:1.7;color:#333;flex-wrap:wrap}
+.moment-comment strong{color:#576b95;font-weight:500}
+.moment-comment .moment-reply-to,.moment-comment .moment-comment-colon{color:#576b95}
+.moment-comment-text{color:#333;overflow-wrap:anywhere}
+.moment-comment.is-reply{padding-left:0;background:none}
+
+.moment-comment-form{display:block;margin-top:10px}
+/* 评论框默认收起：display:block 会盖掉浏览器对 hidden 的默认隐藏，必须显式写上 */
+.moment-comment-form[hidden]{display:none}
+.moment-comment-fields{display:grid;grid-template-columns:1fr 1fr 1fr;gap:7px}
+.moment-comment-fields input{min-width:0;width:100%;box-sizing:border-box;border:1px solid #eee;border-radius:4px;padding:7px 8px;font-size:12px}
+.moment-comment-form textarea{width:100%;min-height:66px;resize:vertical;border:1px solid #eee;border-radius:5px;padding:9px;margin-top:7px;font-size:12px;box-sizing:border-box}
+.moment-comment-submit{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:7px}
+.moment-comment-submit label{font-size:12px;color:#888}
+.moment-comment-submit label input{width:64px;border:1px solid #eee;border-radius:4px;padding:5px}
+.moment-comment-submit button{border:0;background:#f4645f;color:#fff;border-radius:4px;padding:7px 15px;font-size:12px;cursor:pointer}
+.moment-empty{padding:35px;text-align:center;color:#aaa}
+.moment-pagination{text-align:center;margin:22px 0}
+.moment-pagination a,.moment-pagination span{display:inline-block;padding:5px 11px;margin:0 3px;border:1px solid #eee;border-radius:4px;color:#777}
+.moment-pagination span{background:#f4645f;border-color:#f4645f;color:#fff}
+.moment-reply-btn{border:0;background:none;padding:0;color:#aaa;font-size:10px;cursor:pointer}
+.moment-reply-btn:hover{color:#f4645f}
+.moment-lightbox-view,.moment-video-modal{display:none;position:fixed;z-index:99999;inset:0;background:rgba(0,0,0,.92);align-items:center;justify-content:center}
+.moment-lightbox-view.show,.moment-video-modal.show{display:flex}
+/* 居中修复：实测大图/视频两次都贴在左上角，flex 居中在站上没生效。
+   改成图片和播放器自身绝对定位居中，不再只靠父容器的 flex。 */
+.moment-lightbox-view img{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:1;max-width:88vw;max-height:88vh;object-fit:contain}
+.moment-lightbox-view button,.moment-video-modal>button{position:absolute;z-index:2;border:0;background:rgba(255,255,255,.16);color:#fff;width:42px;height:42px;border-radius:50%;font-size:28px;cursor:pointer}
+.moment-lightbox-close,.moment-video-close{right:22px;top:20px}
+/* 实测 bug：‹ › 原来没写 top，堆在顶部两角，大图又会盖住左边的 ‹。
+   现在垂直居中在图片两侧，z-index 高于图片，保证点得到 */
+.moment-lightbox-prev{left:20px;top:50%;transform:translateY(-50%)}
+.moment-lightbox-next{right:20px;top:50%;transform:translateY(-50%)}
+.moment-video-modal{padding:0;box-sizing:border-box}
+.moment-video-modal #moment-artplayer{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(900px,90vw);max-height:80vh;aspect-ratio:16/9}
+.moment-video-modal #moment-artplayer .artplayer{width:100%;height:100%}
+.moment-modal-open{overflow:hidden}
+@media(max-width:767px){.moment-card,.moment-composer{padding:13px}.moment-images.grid-1{grid-template-columns:1fr}.moment-images.grid-2,.moment-images.grid-3{max-width:100%}.moment-music>img{width:58px;height:58px}}
+@media(max-width:600px){.moment-comment-fields{grid-template-columns:1fr}.moment-video-thumb{height:190px}.moment-video-modal #moment-artplayer{width:94vw}.moment-more-menu{right:40px}.moment-more-menu button{padding:10px 13px}}
